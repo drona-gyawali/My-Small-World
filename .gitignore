@@ -1,0 +1,6 @@
+/node_modules
+/.next
+.env
+/env_file
+/server_config.pat
+/server_sonet_90x.lat
