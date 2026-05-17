@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ClientProviders from "./components/ClientProviders";
 import "./globals.css";
 
+
 export const metadata: Metadata = {
   title: "Drona Raj Gyawali | Software Engineer",
   description: "CS Undergrad '28 | GSOC'26 @GreedyBear Project | Building threat intel APIs, Agentic pipelines, and production-grade systems.",

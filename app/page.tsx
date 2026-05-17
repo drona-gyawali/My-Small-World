@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-
+import Image from "next/image";
 import {
   Github,
   Linkedin,
@@ -98,7 +98,7 @@ export default async function Home() {
               <div className="flex flex-col gap-4">
 
                 <div className="flex gap-4 items-center">
-                  <img
+                  <Image
                     src="https://avatars.githubusercontent.com/u/170401554?v=4"
                     alt="Drona Raj Gyawali"
                     width={80}
@@ -112,7 +112,7 @@ export default async function Home() {
                     </h1>
 
                     <p className="text-base text-neutral-500 dark:text-neutral-400">
-                      Software Engineer | GSoC '26 @GreedyBearProject
+                      Software Engineer | GSoC &apos;26 @GreedyBearProject
                     </p>
                   </div>
                 </div>

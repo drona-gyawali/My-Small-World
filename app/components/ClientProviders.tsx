@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState, ReactNode } from "react";
+import { ProgressProvider } from '@bprogress/next/app';
 
 type Theme = "light" | "dark";
 
@@ -53,12 +54,23 @@ export default function ClientProviders({ children }: { children: ReactNode }) {
     }, 300);
   };
 
-  // Always wrap everything in the Provider to prevent useTheme hooks from crashing on startup
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className={!mounted ? "dark" : ""}>
-        {children}
-      </div>
+      <ProgressProvider
+        height="2px"
+        color="#2563eb"
+        options={{ 
+          showSpinner: false,
+          trickleSpeed: 200,
+          speed: 300,
+          easing: 'ease-in-out'
+        }}
+        shallowRouting
+      >
+        <div className={!mounted ? "dark" : ""}>
+          {children}
+        </div>
+      </ProgressProvider>
     </ThemeContext.Provider>
   );
 }
