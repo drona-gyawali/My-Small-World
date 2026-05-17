@@ -3,4 +3,4 @@
 This is first version of my portfolio built using NextJS for seo compatibility.
 
 
-> <img width="1359" height="625" alt="Image" src="https://github.com/user-attachments/assets/a05db599-0b96-4206-82f2-e7b8ca721f9b" />
+https://github.com/user-attachments/assets/b1d4cd67-a2cd-43e8-8e9e-9cce31dcafd4
