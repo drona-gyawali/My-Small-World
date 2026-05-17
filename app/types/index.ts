@@ -11,6 +11,8 @@ export interface Experience {
   isMember?: boolean;
   isContributor?:boolean;
   isGSOC?:boolean;
+  isRemote?:boolean;
+  imgUrl?: string;
 }
 
 export interface Project {

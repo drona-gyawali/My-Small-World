@@ -4,21 +4,36 @@ import { Experience, Project, BlogPost } from "../types";
 
 export const experiences: Experience[] = [
   {
+    id: "gsoc",
+    role: "Open Source Developer",
+    org: "Google Summer of Code",
+    orgUrl: "https://github.com/GreedyBear-Project",
+    projectTag: "GB",
+    period: "Apr 2026 – Present",
+    impact: "Developed a push-based API for raw telemetry ingestion at global honeypot scale for GreedyBear Project.",
+    prUrl: "https://github.com/GreedyBear-Project/GreedyBear/pulls?q=is%3Apr+author%3Adrona-gyawali+is%3Aclosed",
+    tags: ["Python", "Django REST", "PostgreSQL", "DjangoQ Cluster", "ElasticSearch", "React"],
+    isContributor:true,
+    isRemote:true,
+    imgUrl:"https://upload.wikimedia.org/wikipedia/commons/8/85/GSoC-icon.svg"
+  },
+  {
     id: "greedybear",
-    role: "Core Backend & System Engineer",
+    role: "Backend Contributor",
     org: "GreedyBear-Project",
     orgUrl: "https://github.com/GreedyBear-Project",
     projectTag: "GreedyBear",
-    period: "Jan 2026 – Present",
-    impact: "Architecting a push-based API for raw telemetry ingestion at global honeypot scale. Now a project member.",
+    period: "Jan 2026 – Apr 2026",
+    impact: "Contributed to the pull based ingestion pipeline and integrated credential based clustering.",
     prUrl: "https://github.com/GreedyBear-Project/GreedyBear/pulls?q=is%3Apr+author%3Adrona-gyawali+is%3Aclosed",
-    tags: ["Python", "Django REST", "PostgreSQL", "DjangoQ Cluster", "ElasticSearch", "JavaScript"],
+    tags: ["Python", "Django REST", "PostgreSQL", "DjangoQ Cluster", "ElasticSearch", "React"],
     isMember: true,
-    isGSOC:true,
+    isRemote:true,
+    imgUrl:"https://avatars.githubusercontent.com/u/272869833?s=48&v=4"
   },
   {
     id: "buffalogs",
-    role: "Backend Engineer",
+    role: "Backend Contributor",
     org: "Certego",
     orgUrl: "https://github.com/certego",
     projectTag: "BuffaLogs",
@@ -26,7 +41,9 @@ export const experiences: Experience[] = [
     impact: "Built backend logic to detect suspicious login patterns in real time across enterprise auth pipelines.",
     prUrl: "https://github.com/certego/BuffaLogs/pulls?q=is%3Apr+author%3Adrona-gyawali+is%3Aclosed",
     tags: ["Python", "TypeScript", "Django", "ElasticSearch", "Docker", "NextJs"],
-    isContributor:true
+    isContributor:true,
+    isRemote:true,
+    imgUrl:"https://avatars.githubusercontent.com/u/7250049?s=48&v=4"
   },
 ];
 
