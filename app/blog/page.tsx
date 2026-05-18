@@ -1,18 +1,17 @@
-import Link from "next/link";
-import { ArrowRight, ArrowLeft, Rss } from "lucide-react";
+import Link from 'next/link';
+import { ArrowRight, ArrowLeft, Rss } from 'lucide-react';
 
-import { Navigation } from "../components/Navigation";
-import { Footer } from "../components/Footer";
-import { getAllBlogs } from "../lib/rss";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import rehypeRaw from "rehype-raw";
-import { CleanSummary } from "../lib/mardown";
+import { Navigation } from '../components/Navigation';
+import { Footer } from '../components/Footer';
+import { getAllBlogs } from '../lib/rss';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
+import { CleanSummary } from '../lib/mardown';
 
 export const metadata = {
-  title: "Blog | Drona Raj Gyawali",
-  description:
-    "Technical writings on backend engineering and system design.",
+  title: 'Blog | Drona Raj Gyawali',
+  description: 'Technical writings on backend engineering and system design.',
 };
 
 export default async function BlogPage() {
@@ -41,7 +40,7 @@ export default async function BlogPage() {
         </div>
 
         <div className="flex flex-col">
-          {allBlogs.map((post) => (
+          {allBlogs.map(post => (
             <article key={post.id} className="group">
               <Link
                 href={`/blog/${post.slug}`}
@@ -62,7 +61,10 @@ export default async function BlogPage() {
                 </h2>
 
                 <div className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed [&_img]:hidden [&_figure]:hidden">
-                  <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
+                  <ReactMarkdown
+                    remarkPlugins={[remarkGfm]}
+                    rehypePlugins={[rehypeRaw]}
+                  >
                     {CleanSummary(post)}
                   </ReactMarkdown>
                 </div>
@@ -74,12 +76,6 @@ export default async function BlogPage() {
               </Link>
             </article>
           ))}
-        </div>
-        <div className="mt-12 pt-8 border-t border-neutral-200 dark:border-neutral-800">
-          <div className="flex items-center gap-3 text-sm text-neutral-500">
-            <Rss className="w-4 h-4" />
-            <span>Auto-synced from RSS feeds</span>
-          </div>
         </div>
       </main>
 

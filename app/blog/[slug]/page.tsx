@@ -1,18 +1,18 @@
-import Link from "next/link";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import rehypeRaw from "rehype-raw";
-import { ArrowLeft, Calendar, User } from "lucide-react";
+import Link from 'next/link';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
+import { ArrowLeft, Calendar, User } from 'lucide-react';
 
-import { Navigation } from "../../components/Navigation";
-import { Footer } from "../../components/Footer";
+import { Navigation } from '../../components/Navigation';
+import { Footer } from '../../components/Footer';
 
-import { getAllBlogs, getBlogBySlug } from "../../lib/rss";
+import { getAllBlogs, getBlogBySlug } from '../../lib/rss';
 
 export async function generateStaticParams() {
   const blogs = await getAllBlogs();
 
-  return blogs.map((blog) => ({
+  return blogs.map(blog => ({
     slug: blog.slug,
   }));
 }
@@ -26,7 +26,7 @@ export async function generateMetadata({
 
   if (!post) {
     return {
-      title: "Blog Not Found",
+      title: 'Blog Not Found',
     };
   }
 
@@ -49,9 +49,7 @@ export default async function BlogPostPage({
         <Navigation />
 
         <main className="max-w-2xl mx-auto px-4 pt-8 pb-16">
-          <h1 className="text-2xl font-bold">
-            Blog not found
-          </h1>
+          <h1 className="text-2xl font-bold">Blog not found</h1>
         </main>
 
         <Footer />
@@ -96,8 +94,15 @@ export default async function BlogPostPage({
             </div>
           </header>
 
-          <div className="prose prose-neutral dark:prose-invert max-w-none">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}  rehypePlugins={[rehypeRaw]}>
+          <div
+            className="prose prose-neutral dark:prose-invert max-w-none font-sans 
+            prose-headings:font-sans prose-headings:tracking-tight 
+            prose-code:font-mono prose-p:text-neutral-700 dark:prose-p:text-neutral-300"
+          >
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              rehypePlugins={[rehypeRaw]}
+            >
               {post.content}
             </ReactMarkdown>
           </div>

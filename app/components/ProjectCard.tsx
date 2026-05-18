@@ -1,21 +1,27 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
-import Link from "next/link";
-import { Project } from "../types";
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
+import { Project } from '../types';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
   visible: (delay: number = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, delay, ease: [0.25, 0.1, 0.25, 1] }
-  })
+    transition: { duration: 0.5, delay, ease: [0.25, 0.1, 0.25, 1] },
+  }),
 };
 
-export function ProjectCard({ project, index }: { project: Project; index: number }) {
+export function ProjectCard({
+  project,
+  index,
+}: {
+  project: Project;
+  index: number;
+}) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (

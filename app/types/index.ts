@@ -9,9 +9,9 @@ export interface Experience {
   prUrl: string;
   tags: string[];
   isMember?: boolean;
-  isContributor?:boolean;
-  isGSOC?:boolean;
-  isRemote?:boolean;
+  isContributor?: boolean;
+  isGSOC?: boolean;
+  isRemote?: boolean;
   imgUrl?: string;
 }
 

@@ -1,21 +1,25 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { Github, Linkedin, Twitter, Mail, Rss } from "lucide-react";
+import Link from 'next/link';
+import { Github, Linkedin, Twitter, Mail, Rss } from 'lucide-react';
 
 const socialLinks = [
-  { href: "https://x.com/dornaoffical", label: "X", icon: Twitter },
-  { href: "https://linkedin.com/in/dorna-gyawali", label: "LinkedIn", icon: Linkedin },
-  { href: "https://github.com/drona-gyawali", label: "GitHub", icon: Github },
-  { href: "https://medium.com/@dronarajgyawali", label: "Medium", icon: Rss },
-  { href: "mailto:dorna.816411@bumc.tu.edu.np", label: "Email", icon: Mail },
+  { href: 'https://x.com/dornaoffical', label: 'X', icon: Twitter },
+  {
+    href: 'https://linkedin.com/in/dorna-gyawali',
+    label: 'LinkedIn',
+    icon: Linkedin,
+  },
+  { href: 'https://github.com/drona-gyawali', label: 'GitHub', icon: Github },
+  { href: 'https://medium.com/@dronarajgyawali', label: 'Medium', icon: Rss },
+  { href: 'mailto:dorna.816411@bumc.tu.edu.np', label: 'Email', icon: Mail },
 ];
 
 const navItems = [
-  { label: "Home", href: "/" },
-  { label: "Work", href: "/#experience" },
-  { label: "Blog", href: "/blog" },
-  { label: "Projects", href: "/#projects" },
+  { label: 'Home', href: '/' },
+  { label: 'Work', href: '/#experience' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Projects', href: '/#projects' },
 ];
 
 export function Footer() {
@@ -28,7 +32,7 @@ export function Footer() {
               Navigate
             </p>
             <nav className="flex flex-wrap gap-x-6 gap-y-1">
-              {navItems.map((item) => (
+              {navItems.map(item => (
                 <Link
                   key={item.label}
                   href={item.href}
@@ -44,7 +48,7 @@ export function Footer() {
               Connect
             </p>
             <div className="flex flex-wrap gap-2">
-              {socialLinks.map((link) => {
+              {socialLinks.map(link => {
                 const Icon = link.icon;
                 return (
                   <a

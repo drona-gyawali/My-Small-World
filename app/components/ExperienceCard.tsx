@@ -1,21 +1,34 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
-import { Github, ArrowUpRight, Minus, Plus, Globe, Image as ImageIcon } from "lucide-react";
-import { Experience } from "../types";
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
+import {
+  Github,
+  ArrowUpRight,
+  Minus,
+  Plus,
+  Globe,
+  Image as ImageIcon,
+} from 'lucide-react';
+import { Experience } from '../types';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
   visible: (delay: number = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, delay, ease: [0.25, 0.1, 0.25, 1] }
-  })
+    transition: { duration: 0.5, delay, ease: [0.25, 0.1, 0.25, 1] },
+  }),
 };
 
-export function ExperienceCard({ exp, index }: { exp: Experience; index: number }) {
+export function ExperienceCard({
+  exp,
+  index,
+}: {
+  exp: Experience;
+  index: number;
+}) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -28,9 +41,7 @@ export function ExperienceCard({ exp, index }: { exp: Experience; index: number 
       className="group"
     >
       <div className="flex flex-row items-start justify-between gap-4">
-
         <div className="flex min-w-0 flex-1 flex-row items-start gap-3">
-
           <div className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-900 overflow-hidden transition-colors duration-200">
             {exp.imgUrl ? (
               <Image
@@ -66,10 +77,12 @@ export function ExperienceCard({ exp, index }: { exp: Experience; index: number 
               )}
 
               {/* Minimalist Remote Badge */}
-              {exp.isRemote && (<span className="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] font-medium bg-neutral-50 dark:bg-neutral-900/50 text-neutral-500 dark:text-neutral-400 rounded-full border border-neutral-200 dark:border-neutral-800">
-                <Globe className="w-2.5 h-2.5" />
-                Remote
-              </span>)}
+              {exp.isRemote && (
+                <span className="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] font-medium bg-neutral-50 dark:bg-neutral-900/50 text-neutral-500 dark:text-neutral-400 rounded-full border border-neutral-200 dark:border-neutral-800">
+                  <Globe className="w-2.5 h-2.5" />
+                  Remote
+                </span>
+              )}
 
               <motion.button
                 whileTap={{ scale: 0.9 }}
@@ -83,7 +96,9 @@ export function ExperienceCard({ exp, index }: { exp: Experience; index: number 
                 )}
               </motion.button>
             </div>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-0.5">{exp.role}</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-0.5">
+              {exp.role}
+            </p>
           </div>
         </div>
 
@@ -97,9 +112,9 @@ export function ExperienceCard({ exp, index }: { exp: Experience; index: number 
         {isOpen && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
+            animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
             className="overflow-hidden"
           >
             {/* Added pl-13 to align details text exactly with the heading layout text (skipping the logo thumbnail grid width) */}
@@ -108,8 +123,11 @@ export function ExperienceCard({ exp, index }: { exp: Experience; index: number 
                 {exp.impact}
               </p>
               <div className="flex flex-wrap gap-1.5 mb-3">
-                {exp.tags.map((tag) => (
-                  <span key={tag} className="px-2 py-0.5 text-[11px] font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 rounded-md">
+                {exp.tags.map(tag => (
+                  <span
+                    key={tag}
+                    className="px-2 py-0.5 text-[11px] font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 rounded-md"
+                  >
                     {tag}
                   </span>
                 ))}

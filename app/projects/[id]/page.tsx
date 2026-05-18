@@ -1,7 +1,8 @@
-import Link from "next/link";
-import MotionWrapper from "@/app/components/MotionWrapper";
-import ReactMarkdown from "react-markdown";
-
+import Link from 'next/link';
+import MotionWrapper from '@/app/components/MotionWrapper';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 import {
   ArrowLeft,
   Github,
@@ -12,24 +13,24 @@ import {
   Cpu,
   Layers,
   CheckCircle2,
-} from "lucide-react";
+} from 'lucide-react';
 
-import { Navigation } from "../../components/Navigation";
-import { Footer } from "../../components/Footer";
-import { VideoPlaceholder } from "../../components/VideoPlaceholder";
+import { Navigation } from '../../components/Navigation';
+import { Footer } from '../../components/Footer';
+import { VideoPlaceholder } from '../../components/VideoPlaceholder';
 
-import { projects, getProjectById } from "../../lib/data";
-import { getProjectMarkdown } from "@/app/lib/mardown";
+import { projects, getProjectById } from '../../lib/data';
+import { getProjectMarkdown } from '@/app/lib/mardown';
 
 export async function generateStaticParams() {
-  return projects.map((project) => ({
+  return projects.map(project => ({
     id: project.id,
   }));
 }
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
   const project = getProjectById(params.id);
-  if (!project) return { title: "Project Not Found" };
+  if (!project) return { title: 'Project Not Found' };
 
   return {
     title: `${project.title} — Drona Raj Gyawali`,
@@ -37,7 +38,11 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
   };
 }
 
-export default async function ProjectPage({ params }: { params: { id: string } }) {
+export default async function ProjectPage({
+  params,
+}: {
+  params: { id: string };
+}) {
   const project = getProjectById(params.id);
 
   const detailedDescriptionMarkdown = getProjectMarkdown(params.id);
@@ -47,7 +52,10 @@ export default async function ProjectPage({ params }: { params: { id: string } }
       <div className="min-h-screen bg-white dark:bg-neutral-950">
         <Navigation />
         <main className="max-w-2xl mx-auto px-4 pt-8 pb-16">
-          <Link href="/" className="inline-flex items-center gap-2 text-sm text-neutral-500 mb-6">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-sm text-neutral-500 mb-6"
+          >
             <ArrowLeft className="w-4 h-4" />
             Back to projects
           </Link>
@@ -159,7 +167,7 @@ export default async function ProjectPage({ params }: { params: { id: string } }
               Tech Stack
             </h2>
             <div className="flex flex-wrap gap-2">
-              {project.tech.map((tech) => (
+              {project.tech.map(tech => (
                 <span
                   key={tech}
                   className="px-3 py-1.5 text-sm font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 rounded-lg border border-neutral-200 dark:border-neutral-700"
@@ -215,22 +223,18 @@ export default async function ProjectPage({ params }: { params: { id: string } }
               </h2>
 
               <div className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
-                <ReactMarkdown
-                  components={{
-                    h1: (props) => <h1 className="text-xl font-bold mt-6 mb-3 text-neutral-900 dark:text-neutral-100 tracking-tight" {...props} />,
-                    h2: (props) => <h2 className="text-lg font-bold mt-5 mb-2 text-neutral-900 dark:text-neutral-100 tracking-tight" {...props} />,
-                    h3: (props) => <h3 className="text-base font-bold mt-4 mb-2 text-neutral-900 dark:text-neutral-100" {...props} />,
-                    p: (props) => <p className="mb-4 text-neutral-600 dark:text-neutral-400" {...props} />,
-                    ul: (props) => <ul className="list-disc pl-5 mb-4 space-y-1" {...props} />,
-                    ol: (props) => <ol className="list-decimal pl-5 mb-4 space-y-1" {...props} />,
-                    li: (props) => <li className="text-neutral-600 dark:text-neutral-400" {...props} />,
-                    strong: (props) => <strong className="font-semibold text-neutral-900 dark:text-neutral-100" {...props} />,
-                    pre: (props) => <pre className="bg-neutral-950 dark:bg-neutral-900 p-4 rounded-xl overflow-x-auto my-4 font-mono text-xs border border-neutral-800 text-neutral-200 shadow-sm" {...props} />,
-                    code: (props) => <code className="bg-neutral-100 dark:bg-neutral-900 px-1.5 py-0.5 rounded font-mono text-xs text-neutral-900 dark:text-neutral-200 border border-neutral-200 dark:border-neutral-800" {...props} />,
-                  }}
+                <div
+                  className="prose prose-neutral dark:prose-invert max-w-none font-sans 
+                            prose-headings:font-sans prose-headings:tracking-tight 
+                            prose-code:font-mono prose-p:text-neutral-700 dark:prose-p:text-neutral-300"
                 >
-                  {detailedDescriptionMarkdown}
-                </ReactMarkdown>
+                  <ReactMarkdown
+                    remarkPlugins={[remarkGfm]}
+                    rehypePlugins={[rehypeRaw]}
+                  >
+                    {detailedDescriptionMarkdown}
+                  </ReactMarkdown>
+                </div>
               </div>
             </div>
           )}

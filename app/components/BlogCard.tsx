@@ -1,11 +1,11 @@
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import rehypeRaw from "rehype-raw";
-import { BlogPost } from "../types";
-import MotionWrapper from "./MotionWrapper";
-import { CleanSummary } from "../lib/mardown";
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
+import { BlogPost } from '../types';
+import MotionWrapper from './MotionWrapper';
+import { CleanSummary } from '../lib/mardown';
 
 interface BlogCardProps {
   post: BlogPost;
@@ -13,8 +13,7 @@ interface BlogCardProps {
 }
 
 export function BlogCard({ post, index }: BlogCardProps) {
-
-  const displaySummary = CleanSummary(post)
+  const displaySummary = CleanSummary(post);
 
   return (
     <MotionWrapper>
@@ -27,12 +26,14 @@ export function BlogCard({ post, index }: BlogCardProps) {
             <h3 className="text-base font-semibold leading-tight text-neutral-900 dark:text-neutral-100 group-hover:text-neutral-600 dark:group-hover:text-neutral-400 transition-colors">
               {post.title}
             </h3>
-            
+
             <div className="line-clamp-2 text-sm text-neutral-500 dark:text-neutral-400 [&_img]:hidden [&_figure]:hidden">
-              <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                rehypePlugins={[rehypeRaw]}
+              >
                 {displaySummary}
               </ReactMarkdown>
-              
             </div>
 
             <div className="flex items-center gap-2 text-xs text-neutral-400 dark:text-neutral-500">
@@ -40,15 +41,15 @@ export function BlogCard({ post, index }: BlogCardProps) {
                 {post.source}
               </span>
               <span>
-                {new Date(post.date).toLocaleDateString("en-US", {
-                  month: "short",
-                  day: "numeric",
-                  year: "numeric",
+                {new Date(post.date).toLocaleDateString('en-US', {
+                  month: 'short',
+                  day: 'numeric',
+                  year: 'numeric',
                 })}
               </span>
             </div>
           </div>
-          
+
           <span className="hidden sm:inline-flex items-center gap-1 text-sm text-neutral-400 group-hover:text-neutral-600 dark:group-hover:text-neutral-300 transition-colors shrink-0">
             Read
             <ArrowRight className="w-3.5 h-3.5" />

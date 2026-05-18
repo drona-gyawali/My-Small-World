@@ -1,6 +1,6 @@
-import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
+import Head from 'next/head';
+import Link from 'next/link';
+import Image from 'next/image';
 import {
   Github,
   Linkedin,
@@ -9,17 +9,17 @@ import {
   Rss,
   ArrowRight,
   Eye,
-} from "lucide-react";
+} from 'lucide-react';
 
-import { Navigation } from "./components/Navigation";
-import { Footer } from "./components/Footer";
-import { ExperienceCard } from "./components/ExperienceCard";
-import { ProjectCard } from "./components/ProjectCard";
-import { BlogCard } from "./components/BlogCard";
-import MotionWrapper from "./components/MotionWrapper";
+import { Navigation } from './components/Navigation';
+import { Footer } from './components/Footer';
+import { ExperienceCard } from './components/ExperienceCard';
+import { ProjectCard } from './components/ProjectCard';
+import { BlogCard } from './components/BlogCard';
+import MotionWrapper from './components/MotionWrapper';
 
-import { experiences, projects } from "./lib/data";
-import { getAllBlogs } from "./lib/rss";
+import { experiences, projects } from './lib/data';
+import { getAllBlogs } from './lib/rss';
 
 function SectionHeading({
   children,
@@ -50,28 +50,28 @@ export default async function Home() {
 
   const socialLinks = [
     {
-      href: "https://x.com/dornaoffical",
-      label: "X",
+      href: 'https://x.com/dornaoffical',
+      label: 'X',
       icon: <Twitter className="w-4 h-4" />,
     },
     {
-      href: "https://linkedin.com/in/dorna-gyawali",
-      label: "LinkedIn",
+      href: 'https://linkedin.com/in/dorna-gyawali',
+      label: 'LinkedIn',
       icon: <Linkedin className="w-4 h-4" />,
     },
     {
-      href: "https://github.com/drona-gyawali",
-      label: "GitHub",
+      href: 'https://github.com/drona-gyawali',
+      label: 'GitHub',
       icon: <Github className="w-4 h-4" />,
     },
     {
-      href: "https://blogs.dorna.com.np/rss.xml",
-      label: "Hashnode",
+      href: 'https://blogs.dorna.com.np/rss.xml',
+      label: 'Hashnode',
       icon: <Rss className="w-4 h-4" />,
     },
     {
-      href: "mailto:dorna.816411@bumc.tu.edu.np",
-      label: "Email",
+      href: 'mailto:dorna.816411@bumc.tu.edu.np',
+      label: 'Email',
       icon: <Mail className="w-4 h-4" />,
     },
   ];
@@ -91,12 +91,10 @@ export default async function Home() {
 
       <main className="page-content">
         <div className="space-y-10 pt-8">
-
           {/* Hero */}
           <div className="max-w-2xl mx-auto px-4">
             <MotionWrapper>
               <div className="flex flex-col gap-4">
-
                 <div className="flex gap-4 items-center">
                   <Image
                     src="https://avatars.githubusercontent.com/u/170401554?v=4"
@@ -118,12 +116,12 @@ export default async function Home() {
                 </div>
 
                 <p className="text-sm text-neutral-500 dark:text-neutral-400 max-w-xl">
-                  Love to work on projects that demand scale, performance,
-                  and clean architecture.
+                  Love to work on projects that demand scale, performance, and
+                  clean architecture.
                 </p>
 
                 <div className="flex flex-wrap gap-1">
-                  {socialLinks.map((link) => (
+                  {socialLinks.map(link => (
                     <a
                       key={link.label}
                       href={link.href}
@@ -144,10 +142,7 @@ export default async function Home() {
           {/* Experience */}
           <div className="max-w-2xl mx-auto px-4" id="experience">
             <section className="space-y-2">
-
-              <SectionHeading>
-                Experience
-              </SectionHeading>
+              <SectionHeading>Experience</SectionHeading>
 
               <div className="flex flex-col gap-4">
                 {experiences.map((exp, i) => (
@@ -169,17 +164,13 @@ export default async function Home() {
                   </a>
                 </div>
               </MotionWrapper>
-
             </section>
           </div>
 
           {/* Projects */}
           <div className="max-w-2xl mx-auto px-4" id="projects">
             <section className="space-y-2">
-
-              <SectionHeading>
-                Projects
-              </SectionHeading>
+              <SectionHeading>Projects</SectionHeading>
 
               <div className="flex flex-col gap-2">
                 {projects.map((project, i) => (
@@ -196,24 +187,18 @@ export default async function Home() {
                     className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-200 dark:border-neutral-800 text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-all duration-300"
                   >
                     Show all Projects
-
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
               </MotionWrapper>
-
             </section>
           </div>
 
           {/* Blog */}
           <div className="max-w-2xl mx-auto px-4" id="blog">
             <section className="space-y-2">
-
               <div className="flex items-end justify-between mb-6">
-
-                <SectionHeading>
-                  Blog
-                </SectionHeading>
+                <SectionHeading>Blog</SectionHeading>
 
                 <div className="flex items-center gap-2">
                   <a
@@ -255,12 +240,10 @@ export default async function Home() {
                     className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-200 dark:border-neutral-800 text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-all duration-300"
                   >
                     Show all blogs
-
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
               </MotionWrapper>
-
             </section>
           </div>
 
@@ -280,7 +263,6 @@ export default async function Home() {
               </div>
             </MotionWrapper>
           </div>
-
         </div>
       </main>
 

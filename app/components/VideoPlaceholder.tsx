@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { useState, useCallback } from "react";
-import { motion } from "framer-motion";
-import { Play, Upload, Film, X } from "lucide-react";
+import { useState, useCallback } from 'react';
+import { motion } from 'framer-motion';
+import { Play, Upload, Film, X } from 'lucide-react';
 
 interface VideoPlaceholderProps {
   projectId: string;
@@ -10,7 +10,11 @@ interface VideoPlaceholderProps {
   videoUrl?: string;
 }
 
-export function VideoPlaceholder({ projectId, label, videoUrl }: VideoPlaceholderProps) {
+export function VideoPlaceholder({
+  projectId,
+  label,
+  videoUrl,
+}: VideoPlaceholderProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isDragOver, setIsDragOver] = useState(false);
   const [uploadedVideo, setUploadedVideo] = useState<string | null>(null);
@@ -33,21 +37,24 @@ export function VideoPlaceholder({ projectId, label, videoUrl }: VideoPlaceholde
     const files = e.dataTransfer.files;
     if (files.length > 0) {
       const file = files[0];
-      if (file.type.startsWith("video/")) {
+      if (file.type.startsWith('video/')) {
         setUploadedVideo(URL.createObjectURL(file));
       }
     }
   }, []);
 
-  const handleFileInput = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    const files = e.target.files;
-    if (files && files.length > 0) {
-      const file = files[0];
-      if (file.type.startsWith("video/")) {
-        setUploadedVideo(URL.createObjectURL(file));
+  const handleFileInput = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const files = e.target.files;
+      if (files && files.length > 0) {
+        const file = files[0];
+        if (file.type.startsWith('video/')) {
+          setUploadedVideo(URL.createObjectURL(file));
+        }
       }
-    }
-  }, []);
+    },
+    []
+  );
 
   if (activeUrl && isPlaying) {
     return (
@@ -79,8 +86,8 @@ export function VideoPlaceholder({ projectId, label, videoUrl }: VideoPlaceholde
       animate={{ opacity: 1, y: 0 }}
       className={`relative w-full aspect-video rounded-xl border-2 border-dashed transition-all duration-300 overflow-hidden ${
         isDragOver
-          ? "border-neutral-900 dark:border-neutral-100 bg-neutral-100 dark:bg-neutral-800"
-          : "border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/50"
+          ? 'border-neutral-900 dark:border-neutral-100 bg-neutral-100 dark:bg-neutral-800'
+          : 'border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/50'
       }`}
       onDragOver={handleDragOver}
       onDragLeave={handleDragLeave}
@@ -97,19 +104,28 @@ export function VideoPlaceholder({ projectId, label, videoUrl }: VideoPlaceholde
             >
               <Play className="w-6 h-6 ml-1" fill="currentColor" />
             </motion.button>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400">{label}</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400">
+              {label}
+            </p>
           </>
         ) : (
           <>
             <Film className="w-10 h-10 text-neutral-300 dark:text-neutral-600" />
             <div className="text-center space-y-1">
-              <p className="text-sm font-medium text-neutral-600 dark:text-neutral-400">{label}</p>
+              <p className="text-sm font-medium text-neutral-600 dark:text-neutral-400">
+                {label}
+              </p>
               <p className="text-xs text-neutral-400 dark:text-neutral-500">
                 Drag & drop a video or click to upload
               </p>
             </div>
             <label className="cursor-pointer">
-              <input type="file" accept="video/*" className="hidden" onChange={handleFileInput} />
+              <input
+                type="file"
+                accept="video/*"
+                className="hidden"
+                onChange={handleFileInput}
+              />
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
