@@ -3,16 +3,16 @@ export interface Experience {
   role: string;
   org: string;
   orgUrl: string;
-  projectTag: string;
   period: string;
   impact: string;
-  prUrl: string;
+  prUrl?: string;
   tags: string[];
   isMember?: boolean;
   isContributor?: boolean;
   isGSOC?: boolean;
   isRemote?: boolean;
   imgUrl?: string;
+  projectView?: string;
 }
 
 export interface Project {

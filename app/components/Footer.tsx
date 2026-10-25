@@ -71,7 +71,13 @@ export function Footer() {
             &copy; 2026 Drona Raj Gyawali. All rights reserved.
           </p>
           <p className="text-sm text-neutral-400 dark:text-neutral-500">
-            Made in Nepal.
+            Design inspired by{' '}
+            <Link
+              href="https://ramx.in/"
+              className="font-bold underline hover:opacity-80"
+            >
+              ramx
+            </Link>
           </p>
         </div>
       </div>

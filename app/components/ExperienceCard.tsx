@@ -6,10 +6,9 @@ import Image from 'next/image';
 import {
   Github,
   ArrowUpRight,
-  Minus,
-  Plus,
   Globe,
   Image as ImageIcon,
+  Code,
 } from 'lucide-react';
 import { Experience } from '../types';
 
@@ -29,7 +28,7 @@ export function ExperienceCard({
   exp: Experience;
   index: number;
 }) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, _] = useState(true);
 
   return (
     <motion.div
@@ -58,7 +57,7 @@ export function ExperienceCard({
           <div className="flex min-w-0 flex-1 flex-col">
             <div className="flex flex-wrap items-center gap-2">
               <h3 className="text-base font-semibold text-neutral-900 dark:text-neutral-100">
-                {exp.org} / {exp.projectTag}
+                {exp.org}
               </h3>
               {exp.isGSOC && (
                 <span className="px-2 py-0.5 text-[10px] font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 rounded-full border border-neutral-200 dark:border-neutral-700">
@@ -83,18 +82,6 @@ export function ExperienceCard({
                   Remote
                 </span>
               )}
-
-              <motion.button
-                whileTap={{ scale: 0.9 }}
-                onClick={() => setIsOpen(!isOpen)}
-                className="opacity-100 transition-opacity duration-200 p-1 rounded hover:bg-neutral-100 dark:hover:bg-neutral-800"
-              >
-                {isOpen ? (
-                  <Minus className="w-3.5 h-3.5 text-neutral-400" />
-                ) : (
-                  <Plus className="w-3.5 h-3.5 text-neutral-400" />
-                )}
-              </motion.button>
             </div>
             <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-0.5">
               {exp.role}
@@ -133,13 +120,17 @@ export function ExperienceCard({
                 ))}
               </div>
               <a
-                href={exp.prUrl}
+                href={!exp.prUrl ? exp.projectView : exp.prUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors"
               >
-                <Github className="w-3.5 h-3.5" />
-                View merged PRs
+                {exp.prUrl ? (
+                  <Github className="w-3.5 h-3.5" />
+                ) : (
+                  <Code className="w-3.5 h-3.5" />
+                )}
+                {exp.prUrl ? 'View merged PRs' : 'View Project'}
                 <ArrowUpRight className="w-3 h-3" />
               </a>
             </div>

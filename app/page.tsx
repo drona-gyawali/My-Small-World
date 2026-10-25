@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import {
@@ -20,6 +19,12 @@ import MotionWrapper from './components/MotionWrapper';
 
 import { experiences, projects } from './lib/data';
 import { getAllBlogs } from './lib/rss';
+
+export const metadata = {
+  title: 'Drona Raj Gyawali | Software Engineer',
+  description:
+    "Software Engineer | GSoC '26 @GreedyBear Project | Backend Engineering, Distributed Systems, APIs, and Production Infrastructure.",
+};
 
 function SectionHeading({
   children,
@@ -78,15 +83,6 @@ export default async function Home() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-950 transition-colors duration-300">
-      <Head>
-        <title>Drona Raj Gyawali | Software Engineer</title>
-
-        <meta
-          name="description"
-          content="Software Engineer | GSoC '26 @GreedyBear Project | Backend Engineering, Distributed Systems, APIs, and Production Infrastructure."
-        />
-      </Head>
-
       <Navigation />
 
       <main className="page-content">
@@ -109,8 +105,9 @@ export default async function Home() {
                       Drona Raj Gyawali
                     </h1>
 
-                    <p className="text-base text-neutral-500 dark:text-neutral-400">
-                      Software Engineer | GSoC &apos;26 @GreedyBearProject
+                    <p className="text-base text-zinc-500 dark:text-zinc-500">
+                      Software Engineer • GSoC &apos;26 @GreedyBearProject • CS
+                      Undergrad &apos;28
                     </p>
                   </div>
                 </div>
@@ -142,7 +139,7 @@ export default async function Home() {
           {/* Experience */}
           <div className="max-w-2xl mx-auto px-4" id="experience">
             <section className="space-y-2">
-              <SectionHeading>Experience</SectionHeading>
+              <SectionHeading>Experience & Open Source</SectionHeading>
 
               <div className="flex flex-col gap-4">
                 {experiences.map((exp, i) => (
@@ -252,7 +249,7 @@ export default async function Home() {
             <MotionWrapper>
               <div className="flex justify-center">
                 <Link
-                  href="/resume-sde.pdf"
+                  href="/Drona_Software_Engineer.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 text-sm font-semibold hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors duration-300"

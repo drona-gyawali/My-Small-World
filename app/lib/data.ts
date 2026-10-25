@@ -2,16 +2,39 @@ import { Experience, Project, BlogPost } from '../types';
 
 export const experiences: Experience[] = [
   {
+    id: 'minder',
+    role: 'Open Source Developer',
+    org: 'Minder',
+    orgUrl: 'https://github.com/mindersec',
+    period: 'SEP 2026 - Present',
+    impact:
+      'Improved security posture and developer experience across Minder supply chain engine by hardening CLI client architecture, enforcing GitLab clone limits, and expanding automated test reliability.',
+    prUrl:
+      'https://github.com/mindersec/minder/pulls?q=is%3Apr+state%3Aclosed+author%3Adrona-gyawali',
+    tags: [
+      'Go',
+      'gRPC',
+      'PostgreSQL',
+      'SQLC',
+      'NATS',
+      'Protobuf',
+      'Docker & Helm',
+    ],
+    isContributor: true,
+    isRemote: true,
+    imgUrl: 'https://avatars.githubusercontent.com/u/183659722?s=200&v=4',
+  },
+
+  {
     id: 'gsoc',
     role: 'Open Source Developer',
     org: 'Google Summer of Code',
     orgUrl: 'https://github.com/GreedyBear-Project',
-    projectTag: 'GB',
-    period: 'Apr 2026 – Present',
+    period: 'APR 2026 – SEP 2026',
     impact:
-      'Developed a push-based API for raw telemetry ingestion at global honeypot scale for GreedyBear Project.',
-    prUrl:
-      'https://github.com/GreedyBear-Project/GreedyBear/pulls?q=is%3Apr+author%3Adrona-gyawali+is%3Aclosed',
+      'Earned a highly selective Google Summer of Code 2026 mentorship to engineer large-scale honeypot telemetry ingestion and automated threat intelligence pipelines for GreedyBear.',
+    projectView:
+      'https://summerofcode.withgoogle.com/programs/2026/projects/4SAdqqai',
     tags: [
       'Python',
       'Django REST',
@@ -29,10 +52,9 @@ export const experiences: Experience[] = [
     role: 'Backend Contributor',
     org: 'GreedyBear-Project',
     orgUrl: 'https://github.com/GreedyBear-Project',
-    projectTag: 'GreedyBear',
-    period: 'Jan 2026 – Apr 2026',
+    period: 'JAN 2026 – APR 2026',
     impact:
-      'Contributed to the pull based ingestion pipeline and integrated credential based clustering.',
+      'Engineered GreedyBear’s asynchronous event collector API, telemetry models, and real-time threat enrichment services including GeoIP, ASN analytics, and credential-reuse detection.',
     prUrl:
       'https://github.com/GreedyBear-Project/GreedyBear/pulls?q=is%3Apr+author%3Adrona-gyawali+is%3Aclosed',
     tags: [
@@ -52,10 +74,9 @@ export const experiences: Experience[] = [
     role: 'Backend Contributor',
     org: 'Certego',
     orgUrl: 'https://github.com/certego',
-    projectTag: 'BuffaLogs',
-    period: 'Apr 2025 – Dec 2025',
+    period: 'APR 2025 – DEC 2025',
     impact:
-      'Built backend logic to detect suspicious login patterns in real time across enterprise auth pipelines.',
+      'Architected backend log ingestion pipelines, multi-channel alerting integrations, asynchronous Celery worker tasks, and core frontend views for the BuffaLogs security platform.',
     prUrl:
       'https://github.com/certego/BuffaLogs/pulls?q=is%3Apr+author%3Adrona-gyawali+is%3Aclosed',
     tags: [
