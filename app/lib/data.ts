@@ -97,7 +97,7 @@ export const projects: Project[] = [
   {
     id: 'quark',
     imgUrl:
-      'https://github-production-user-asset-6210df.s3.amazonaws.com/170401554/585522760-0d1f5226-4034-49a2-91b3-8abffb745c8a.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20261028%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261028T164047Z&X-Amz-Expires=300&X-Amz-Signature=2f25a17c7833f672f94e6ae990484e2384cea669ae785e6966d44c8f86de935b&X-Amz-SignedHeaders=host&response-content-type=image%2Fpng',
+      'https://github.com/user-attachments/assets/0d1f5226-4034-49a2-91b3-8abffb745c8a',
     title: 'Quark',
     tagline: 'High-performance RAG pipeline',
     description:
@@ -132,7 +132,7 @@ export const projects: Project[] = [
   {
     id: 'runner',
     imgUrl:
-      'https://github-production-user-asset-6210df.s3.amazonaws.com/170401554/611821782-961e0090-eb9f-4b7e-bd00-4494a3d69267.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20261028%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261028T164708Z&X-Amz-Expires=300&X-Amz-Signature=1832092c9281579f5f33fc1bd89764bb2c0f92c85c08cc0b2cc90364c2a09cbd&X-Amz-SignedHeaders=host&response-content-type=image%2Fpng',
+      'https://raw.githubusercontent.com/drona-gyawali/My-Github-Assest/refs/heads/main/dumps/runner.png',
     title: 'Runner',
     tagline: 'Continuous integration(CI) pipeline ',
     description:

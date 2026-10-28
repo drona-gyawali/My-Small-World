@@ -63,8 +63,6 @@ export function ProjectCard({
                 src={project.imgUrl}
                 alt={project.title}
                 fill
-                // TODO: this is hacky way to do; eveuntally we need to find a way to solve this problem.
-                unoptimized
                 className="w-full h-full object-cover"
               />
             ) : (
