@@ -17,6 +17,7 @@ export interface Experience {
 
 export interface Project {
   id: string;
+  imgUrl?: string;
   title: string;
   tagline: string;
   description: string;

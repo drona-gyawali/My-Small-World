@@ -16,6 +16,7 @@ import { ExperienceCard } from './components/ExperienceCard';
 import { ProjectCard } from './components/ProjectCard';
 import { BlogCard } from './components/BlogCard';
 import MotionWrapper from './components/MotionWrapper';
+import { TiltedAvatar } from './components/TiltedAvatar';
 
 import { experiences, projects } from './lib/data';
 import { getAllBlogs } from './lib/rss';
@@ -86,38 +87,32 @@ export default async function Home() {
       <Navigation />
 
       <main className="page-content">
-        <div className="space-y-10 pt-8">
-          {/* Hero */}
+        <div className="space-y-16 pt-12">
+          {/* Hero — centered, avatar with tilt */}
           <div className="max-w-2xl mx-auto px-4">
             <MotionWrapper>
-              <div className="flex flex-col gap-4">
-                <div className="flex gap-4 items-center">
-                  <Image
-                    src="https://avatars.githubusercontent.com/u/170401554?v=4"
-                    alt="Drona Raj Gyawali"
-                    width={80}
-                    height={80}
-                    className="size-20 rounded-full object-cover ring-2 ring-neutral-200 dark:ring-neutral-800"
-                  />
+              <div className="flex flex-col items-center text-center gap-5">
+                {/* Tilted avatar with sketch-frame effect */}
+                <TiltedAvatar />
 
-                  <div>
-                    <h1 className="text-lg font-bold whitespace-nowrap sm:text-2xl text-neutral-900 dark:text-neutral-100">
-                      Drona Raj Gyawali
-                    </h1>
-
-                    <p className="text-base text-zinc-500 dark:text-zinc-500">
-                      Software Engineer • GSoC &apos;26 @GreedyBearProject • CS
-                      Undergrad &apos;28
-                    </p>
-                  </div>
+                {/* Name + role */}
+                <div className="space-y-1">
+                  <h1 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100 tracking-tight">
+                    Drona Gyawali
+                  </h1>
+                  <p className="text-sm text-neutral-500 dark:text-neutral-400">
+                    Engineer · Google SoC &apos;26 @GreedyBear
+                  </p>
                 </div>
 
-                <p className="text-sm text-neutral-500 dark:text-neutral-400 max-w-xl">
-                  Love to work on projects that demand scale, performance, and
-                  clean architecture.
+                {/* Bio */}
+                <p className="text-sm text-neutral-500 dark:text-neutral-400 max-w-sm leading-relaxed">
+                  Working around Agentic Systems, Backend Engineering,
+                  Distributed Systems, APIs, and Production Infrastructure.
                 </p>
 
-                <div className="flex flex-wrap gap-1">
+                {/* Social links — centered row */}
+                <div className="flex items-center gap-1">
                   {socialLinks.map(link => (
                     <a
                       key={link.label}
@@ -126,7 +121,7 @@ export default async function Home() {
                       rel="noopener noreferrer"
                       aria-label={link.label}
                       title={link.label}
-                      className="text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-300 p-2"
+                      className="text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-200 p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
                     >
                       {link.icon}
                     </a>
@@ -139,7 +134,7 @@ export default async function Home() {
           {/* Experience */}
           <div className="max-w-2xl mx-auto px-4" id="experience">
             <section className="space-y-2">
-              <SectionHeading>Experience & Open Source</SectionHeading>
+              <SectionHeading>Experience</SectionHeading>
 
               <div className="flex flex-col gap-4">
                 {experiences.map((exp, i) => (
@@ -167,9 +162,9 @@ export default async function Home() {
           {/* Projects */}
           <div className="max-w-2xl mx-auto px-4" id="projects">
             <section className="space-y-2">
-              <SectionHeading>Projects</SectionHeading>
+              <SectionHeading>Research-Driven Projects</SectionHeading>
 
-              <div className="flex flex-col gap-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {projects.map((project, i) => (
                   <MotionWrapper key={project.id}>
                     <ProjectCard project={project} index={i} />
@@ -245,14 +240,14 @@ export default async function Home() {
           </div>
 
           {/* Resume */}
-          <div className="max-w-2xl mx-auto px-4">
+          <div className="max-w-2xl mx-auto px-4 pb-12">
             <MotionWrapper>
               <div className="flex justify-center">
                 <Link
                   href="/Drona_Software_Engineer.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 text-sm font-semibold hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors duration-300"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 text-sm font-semibold hover:bg-neutral-700 dark:hover:bg-neutral-200 transition-colors duration-300"
                 >
                   <Eye className="w-4 h-4" />
                   View Resume

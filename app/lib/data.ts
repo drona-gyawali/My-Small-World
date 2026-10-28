@@ -27,8 +27,8 @@ export const experiences: Experience[] = [
 
   {
     id: 'gsoc',
-    role: 'Open Source Developer',
-    org: 'Google Summer of Code',
+    role: 'Engineering Intern',
+    org: 'Google Summer of Code 2026',
     orgUrl: 'https://github.com/GreedyBear-Project',
     period: 'APR 2026 – SEP 2026',
     impact:
@@ -96,6 +96,8 @@ export const experiences: Experience[] = [
 export const projects: Project[] = [
   {
     id: 'quark',
+    imgUrl:
+      'https://github-production-user-asset-6210df.s3.amazonaws.com/170401554/585522760-0d1f5226-4034-49a2-91b3-8abffb745c8a.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20261028%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261028T164047Z&X-Amz-Expires=300&X-Amz-Signature=2f25a17c7833f672f94e6ae990484e2384cea669ae785e6966d44c8f86de935b&X-Amz-SignedHeaders=host&response-content-type=image%2Fpng',
     title: 'Quark',
     tagline: 'High-performance RAG pipeline',
     description:
@@ -111,12 +113,12 @@ export const projects: Project[] = [
     ],
     github: 'https://github.com/drona-gyawali/Quark',
     live: 'https://quark-five.vercel.app',
-    hasVideo: true,
-    videoUrl:
-      'https://private-user-images.githubusercontent.com/170401554/583949505-dcf07530-a134-45db-9f93-ac8cef77bffd.mov?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Nzg5NDYxMTEsIm5iZiI6MTc3ODk0NTgxMSwicGF0aCI6Ii8xNzA0MDE1NTQvNTgzOTQ5NTA1LWRjZjA3NTMwLWExMzQtNDVkYi05ZjkzLWFjOGNlZjc3YmZmZC5tb3Y_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwNTE2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDUxNlQxNTM2NTFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wNmI3N2VlMzAwNDJkZDNiNTM3ZjI2NGI4M2U5OTU4YzA3MTQ2MjcyMmQ4Yjg4YTM1NDJmYmIzMWUwZTljYTU4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9dmlkZW8lMkZxdWlja3RpbWUifQ.wjui107hqsSnaSihUu9L1mXkKDnk9PdV9Pwzi2G9C74',
+    hasVideo: false,
   },
   {
     id: 'px47',
+    imgUrl:
+      'https://raw.githubusercontent.com/drona-gyawali/My-Github-Assest/refs/heads/main/dumps/Gemini_Generated_Image_4e1i2c4e1i2c4e1i.jpeg',
     title: 'PX47',
     tagline: 'Multimedia binary processing engine',
     description:
@@ -128,45 +130,54 @@ export const projects: Project[] = [
       'https://private-user-images.githubusercontent.com/170401554/520478042-1785c7e2-6bd2-4204-83e2-1e9cbc3faa32.webm?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Nzg5NDYzODgsIm5iZiI6MTc3ODk0NjA4OCwicGF0aCI6Ii8xNzA0MDE1NTQvNTIwNDc4MDQyLTE3ODVjN2UyLTZiZDItNDIwNC04M2UyLTFlOWNiYzNmYWEzMi53ZWJtP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUxNiUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MTZUMTU0MTI4WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MjgyOTQwNzM0NDFlNGUxNjM5OTQ3ZGY2NWFlYmI4YmNjMTFkNzM0YjQ5NWIzZTYwYjc2Y2ZhZDJiMWUyOWMwYyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPXZpZGVvJTJGd2VibSJ9.xeJZlFQ-l5amjbdGXfL_Zi8A1lWB5yCITElIC8H3_8A',
   },
   {
+    id: 'runner',
+    imgUrl:
+      'https://github-production-user-asset-6210df.s3.amazonaws.com/170401554/611821782-961e0090-eb9f-4b7e-bd00-4494a3d69267.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20261028%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261028T164708Z&X-Amz-Expires=300&X-Amz-Signature=1832092c9281579f5f33fc1bd89764bb2c0f92c85c08cc0b2cc90364c2a09cbd&X-Amz-SignedHeaders=host&response-content-type=image%2Fpng',
+    title: 'Runner',
+    tagline: 'Continuous integration(CI) pipeline ',
+    description:
+      'A minimal, sandboxed CI pipeline engine to securely isolate workflow steps inside virtualized container environments.',
+    tech: ['Go', ' Sandbox', 'CI/CD', 'Docker', 'gVisor'],
+    github: 'https://github.com/drona-gyawali/runner',
+    blog: 'https://blogs.dorna.com.np/diy-ci-cd-engine-gvisor-docker',
+    hasVideo: false,
+  },
+  {
+    id: 'annales',
+    imgUrl:
+      'https://raw.githubusercontent.com/drona-gyawali/Annales/refs/heads/main/docs/blog/diagram/architecture.png',
+    title: 'Annales',
+    tagline: 'S3-backed,key-value store',
+    description:
+      'Annales keeps the current key-value state in RAM for fast reads, records every mutation as an immutable log object in S3-compatible storage, and reconstructs state from durable storage on restart.',
+    tech: ['Go', 'Redis', 'PostgreSQL', 'S3 API', 'AWS S3'],
+    github: 'https://github.com/drona-gyawali/Annales',
+    blog: 'https://github.com/drona-gyawali/Annales/blob/main/docs/blog/architecture.md',
+    hasVideo: false,
+  },
+  {
+    id: 'llm_router',
+    imgUrl:
+      'https://raw.githubusercontent.com/drona-gyawali/llm_router/refs/heads/main/diagram/architecture.png',
+    title: 'LLM Router',
+    tagline: 'LLM gateway that routes Requests',
+    description:
+      'An experimental internal LLM gateway that routes requests across multiple AI providers with multi-layer guardrails, semantic routing, tenant management, and cost tracking.',
+    tech: ['Python', 'Numpy', 'Embeddings', 'Eval', 'FastAPI', 'PostgreSql'],
+    github: 'https://github.com/drona-gyawali/llm_router',
+    hasVideo: false,
+  },
+  {
     id: 'sdr9',
+    imgUrl:
+      'https://raw.githubusercontent.com/drona-gyawali/My-Github-Assest/refs/heads/main/dumps/sdr.png',
     title: 'SDR-9',
     tagline: 'Zero-bandwidth P2P file sharing',
     description:
       'WebRTC-based tunnel enabling direct browser-to-browser data transfer. No central server, no bandwidth limits — pure peer-to-peer architecture.',
     tech: ['WebRTC', 'Node.js', 'Socket.io', 'TypeScript', 'React'],
     github: 'https://github.com/drona-gyawali/SDR-9',
-    blog: 'https://medium.com/@dronarajgyawali',
-    hasVideo: true,
-    videoUrl:
-      'https://private-user-images.githubusercontent.com/170401554/528711384-3ec9cbf1-c4ae-4a61-aed0-545f4fbbe6a4.mov?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzkwMDY2MTAsIm5iZiI6MTc3OTAwNjMxMCwicGF0aCI6Ii8xNzA0MDE1NTQvNTI4NzExMzg0LTNlYzljYmYxLWM0YWUtNGE2MS1hZWQwLTU0NWY0ZmJiZTZhNC5tb3Y_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwNTE3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDUxN1QwODI1MTBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lZjI1NzViMzE2YmM1MWE2MDlmNGY0MmY1Y2Y1ZWEwMTNhNTcwNWVjYzlkMTljZmM4YWJkOTMyZWJjOTQxZTY3JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9dmlkZW8lMkZxdWlja3RpbWUifQ.dhWtlSQFSIOarJ_3hc1z4c2qyDlq9noQM0tBWskoLeE',
-  },
-  {
-    id: 'varta',
-    title: 'Varta',
-    tagline: 'High-concurrency chat architecture',
-    description:
-      'Built for horizontal scale using Redis pub/sub, Kafka streams, and PostgreSQL. Handles thousands of concurrent connections with sub-50ms latency.',
-    tech: ['Node.js', 'Redis', 'Kafka', 'PostgreSQL', 'WebSocket'],
-    github: 'https://github.com/drona-gyawali/Varta',
-    hasVideo: false,
-  },
-  {
-    id: 'scanner',
-    title: 'Scanner',
-    tagline: 'VS Code security extension',
-    description:
-      'Hardcoded API key and credential scanner that runs in real-time as you type. Catches secrets before they hit version control.',
-    tech: [
-      'TypeScript',
-      'VS Code API',
-      'Regex Engine',
-      'Tree-sitter',
-      'C++',
-      'TypeScript',
-    ],
-    github: 'https://github.com/drona-gyawali/secret-scanner',
-    marketplace:
-      'https://marketplace.visualstudio.com/items?itemName=drona-gyawali.secret-scanner-pro',
+    blog: 'https://github.com/drona-gyawali/SDR-9/blob/master/README.md',
     hasVideo: false,
   },
 ];
