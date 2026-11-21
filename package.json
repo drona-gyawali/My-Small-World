@@ -12,6 +12,7 @@
   "dependencies": {
     "@bprogress/next": "^3.2.12",
     "@tailwindcss/typography": "^0.5.0",
+    "@vercel/analytics": "^2.0.1",
     "autoprefixer": "^10.4.0",
     "framer-motion": "^11.0.0",
     "lucide-react": "^0.378.0",
