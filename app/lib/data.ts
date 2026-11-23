@@ -8,7 +8,7 @@ export const experiences: Experience[] = [
     orgUrl: 'https://github.com/mindersec',
     period: 'SEP 2026 - Present',
     impact:
-      'Improved security posture and developer experience across Minder supply chain engine by hardening CLI client architecture, enforcing GitLab clone limits, and expanding automated test reliability.',
+      'Engineered core features and reliability fixes across the codebase, driving CLI client migrations, Rego policy evaluations, and YAML/profile parsing. Also built scalable cursor-based pagination, multi-arch OCI artifact resolution, feature-flag telemetry, and test suites.',
     prUrl:
       'https://github.com/mindersec/minder/pulls?q=is%3Apr+state%3Aclosed+author%3Adrona-gyawali',
     tags: [

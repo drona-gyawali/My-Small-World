@@ -11,17 +11,11 @@ function slugify(text: string) {
     .replace(/\s+/g, '-');
 }
 
-function cleanHtml(htmlString: string): string {
-  if (typeof window === 'undefined') return htmlString;
-  const doc = new DOMParser().parseFromString(htmlString, 'text/html');
-  return doc.body.textContent || doc.body.innerText || '';
-}
-
 async function fetchMediumBlogs(): Promise<BlogPost[]> {
   try {
-    const feed = await parser.parseURL(
-      'https://medium.com/feed/@dronarajgyawali'
-    );
+    const res = await fetch('https://medium.com/feed/@dronarajgyawali');
+    const xml = await res.text();
+    const feed = await parser.parseString(xml);
     return feed.items.map((item, index) => ({
       id: `medium-${index}`,
       title: item.title || 'Untitled',
@@ -40,8 +34,9 @@ async function fetchMediumBlogs(): Promise<BlogPost[]> {
 }
 async function fetchHashnodeBlogs(): Promise<BlogPost[]> {
   try {
-    const feed = await parser.parseURL('https://blogs.dorna.com.np/rss.xml');
-
+    const res = await fetch('https://blogs.dorna.com.np/rss.xml');
+    const xml = await res.text();
+    const feed = await parser.parseString(xml);
     return feed.items.map((item, index) => {
       const summarySnippet = item.contentSnippet || '';
 
