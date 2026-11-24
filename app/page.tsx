@@ -244,7 +244,7 @@ export default async function Home() {
             <MotionWrapper>
               <div className="flex justify-center">
                 <Link
-                  href="/Drona_Software_Engineer.pdf"
+                  href="/Drona-Software-Engineer.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 text-sm font-semibold hover:bg-neutral-700 dark:hover:bg-neutral-200 transition-colors duration-300"
