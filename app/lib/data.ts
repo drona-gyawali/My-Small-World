@@ -6,7 +6,7 @@ export const experiences: Experience[] = [
     role: 'Open Source Developer',
     org: 'Minder',
     orgUrl: 'https://github.com/mindersec',
-    period: 'SEP 2026 - Present',
+    period: 'SEP 2026 - ongoing',
     impact:
       'Engineered core features and reliability fixes across the codebase, driving CLI client migrations, Rego policy evaluations, and YAML/profile parsing. Also built scalable cursor-based pagination, multi-arch OCI artifact resolution, feature-flag telemetry, and test suites.',
     prUrl:
@@ -20,7 +20,7 @@ export const experiences: Experience[] = [
       'Protobuf',
       'Docker & Helm',
     ],
-    isContributor: true,
+    isMember: true,
     isRemote: true,
     imgUrl: 'https://avatars.githubusercontent.com/u/183659722?s=200&v=4',
   },
