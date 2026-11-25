@@ -145,14 +145,14 @@ export const projects: Project[] = [
   {
     id: 'annales',
     imgUrl:
-      'https://raw.githubusercontent.com/drona-gyawali/Annales/refs/heads/main/docs/blog/diagram/architecture.png',
+      'https://raw.githubusercontent.com/drona-gyawali/Annales/refs/heads/main/docs/blog/diagram/annales-desktop.png',
     title: 'Annales',
     tagline: 'S3-backed,key-value store',
     description:
       'Annales keeps the current key-value state in RAM for fast reads, records every mutation as an immutable log object in S3-compatible storage, and reconstructs state from durable storage on restart.',
     tech: ['Go', 'Redis', 'PostgreSQL', 'S3 API', 'AWS S3'],
     github: 'https://github.com/drona-gyawali/Annales',
-    blog: 'https://github.com/drona-gyawali/Annales/blob/main/docs/blog/architecture.md',
+    live:'https://frontend-gold-nine-72.vercel.app/',
     hasVideo: false,
   },
   {
