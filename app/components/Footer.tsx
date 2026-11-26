@@ -2,17 +2,22 @@
 
 import Link from 'next/link';
 import { Github, Linkedin, Twitter, Mail, Rss } from 'lucide-react';
+import { LeetCodeIcon } from './LeetCodeIcon';
 
 const socialLinks = [
-  { href: 'https://x.com/dornaoffical', label: 'X', icon: Twitter },
+  { href: 'https://github.com/drona-gyawali', label: 'GitHub', icon: Github },
+  {
+    href: 'https://leetcode.com/u/dronaraj/',
+    label: 'LeetCode',
+    icon: LeetCodeIcon,
+  },
   {
     href: 'https://linkedin.com/in/dorna-gyawali',
     label: 'LinkedIn',
     icon: Linkedin,
   },
-  { href: 'https://github.com/drona-gyawali', label: 'GitHub', icon: Github },
   { href: 'https://medium.com/@dronarajgyawali', label: 'Medium', icon: Rss },
-  { href: 'mailto:dorna.816411@bumc.tu.edu.np', label: 'Email', icon: Mail },
+  { href: 'mailto:dronarajgyawali@gmail.com', label: 'Email', icon: Mail },
 ];
 
 const navItems = [
