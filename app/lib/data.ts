@@ -152,7 +152,7 @@ export const projects: Project[] = [
       'Annales keeps the current key-value state in RAM for fast reads, records every mutation as an immutable log object in S3-compatible storage, and reconstructs state from durable storage on restart.',
     tech: ['Go', 'Redis', 'PostgreSQL', 'S3 API', 'AWS S3'],
     github: 'https://github.com/drona-gyawali/Annales',
-    live:'https://frontend-gold-nine-72.vercel.app/',
+    live: 'https://frontend-gold-nine-72.vercel.app/',
     hasVideo: false,
   },
   {

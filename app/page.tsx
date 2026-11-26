@@ -8,6 +8,7 @@ import {
   Rss,
   ArrowRight,
   Eye,
+  Code,
 } from 'lucide-react';
 
 import { Navigation } from './components/Navigation';
@@ -17,7 +18,7 @@ import { ProjectCard } from './components/ProjectCard';
 import { BlogCard } from './components/BlogCard';
 import MotionWrapper from './components/MotionWrapper';
 import { TiltedAvatar } from './components/TiltedAvatar';
-
+import { LeetCodeIcon } from './components/LeetCodeIcon';
 import { experiences, projects } from './lib/data';
 import { getAllBlogs } from './lib/rss';
 
@@ -56,9 +57,9 @@ export default async function Home() {
 
   const socialLinks = [
     {
-      href: 'https://x.com/dornaoffical',
-      label: 'X',
-      icon: <Twitter className="w-4 h-4" />,
+      href: 'https://github.com/drona-gyawali',
+      label: 'GitHub',
+      icon: <Github className="w-4 h-4" />,
     },
     {
       href: 'https://linkedin.com/in/dorna-gyawali',
@@ -66,19 +67,19 @@ export default async function Home() {
       icon: <Linkedin className="w-4 h-4" />,
     },
     {
-      href: 'https://github.com/drona-gyawali',
-      label: 'GitHub',
-      icon: <Github className="w-4 h-4" />,
+      href: 'https://leetcode.com/u/dronaraj/',
+      label: 'LeetCode',
+      icon: <LeetCodeIcon className="w-4 h-4" />,
+    },
+    {
+      href: 'mailto:dronarajgyawali@gmail.com',
+      label: 'Email',
+      icon: <Mail className="w-4 h-4" />,
     },
     {
       href: 'https://blogs.dorna.com.np/rss.xml',
       label: 'Hashnode',
       icon: <Rss className="w-4 h-4" />,
-    },
-    {
-      href: 'mailto:dorna.816411@bumc.tu.edu.np',
-      label: 'Email',
-      icon: <Mail className="w-4 h-4" />,
     },
   ];
 
