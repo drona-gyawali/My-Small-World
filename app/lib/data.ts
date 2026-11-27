@@ -3,10 +3,10 @@ import { Experience, Project, BlogPost } from '../types';
 export const experiences: Experience[] = [
   {
     id: 'minder',
-    role: 'Open Source Developer',
+    role: '',
     org: 'Minder',
     orgUrl: 'https://github.com/mindersec',
-    period: 'SEP 2026 - ongoing',
+    period: '',
     impact:
       'Engineered core features and reliability fixes across the codebase, driving CLI client migrations, Rego policy evaluations, and YAML/profile parsing. Also built scalable cursor-based pagination, multi-arch OCI artifact resolution, feature-flag telemetry, and test suites.',
     prUrl:
@@ -27,10 +27,10 @@ export const experiences: Experience[] = [
 
   {
     id: 'gsoc',
-    role: 'Engineering Intern',
+    role: '',
     org: 'Google Summer of Code 2026',
     orgUrl: 'https://github.com/GreedyBear-Project',
-    period: 'APR 2026 – SEP 2026',
+    period: '',
     impact:
       'Earned a highly selective Google Summer of Code 2026 mentorship to engineer large-scale honeypot telemetry ingestion and automated threat intelligence pipelines for GreedyBear.',
     projectView:
@@ -49,10 +49,10 @@ export const experiences: Experience[] = [
   },
   {
     id: 'greedybear',
-    role: 'Backend Contributor',
+    role: '',
     org: 'GreedyBear-Project',
     orgUrl: 'https://github.com/GreedyBear-Project',
-    period: 'JAN 2026 – APR 2026',
+    period: '',
     impact:
       'Engineered GreedyBear’s asynchronous event collector API, telemetry models, and real-time threat enrichment services including GeoIP, ASN analytics, and credential-reuse detection.',
     prUrl:
@@ -71,10 +71,10 @@ export const experiences: Experience[] = [
   },
   {
     id: 'buffalogs',
-    role: 'Backend Contributor',
+    role: '',
     org: 'Certego',
     orgUrl: 'https://github.com/certego',
-    period: 'APR 2025 – DEC 2025',
+    period: '',
     impact:
       'Architected backend log ingestion pipelines, multi-channel alerting integrations, asynchronous Celery worker tasks, and core frontend views for the BuffaLogs security platform.',
     prUrl:

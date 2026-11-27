@@ -135,7 +135,7 @@ export default async function Home() {
           {/* Experience */}
           <div className="max-w-2xl mx-auto px-4" id="experience">
             <section className="space-y-2">
-              <SectionHeading>Experience</SectionHeading>
+              <SectionHeading>Places I've Left My Code :)</SectionHeading>
 
               <div className="flex flex-col gap-4">
                 {experiences.map((exp, i) => (
